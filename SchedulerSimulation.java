@@ -33,7 +33,7 @@ class Process implements Runnable {
     private int priority;
 
     // Constructor to initialize the process with name, burst time, and time quantum
-    // feature 1
+    // feature 1 : add priority feild
     public Process(String name, int burstTime, int timeQuantum, int priority) {
         this.name = name;
         this.burstTime = burstTime;
@@ -154,6 +154,9 @@ class Process implements Runnable {
 }
 
 public class SchedulerSimulation {
+    // Feature 2: context switch counter
+    static int contextSwitches = 0;
+
     public static void main(String[] args) {
         // ⚠️ IMPORTANT: Put your student ID here to seed the random number generator
         // This makes your output unique to you - DO NOT forget to change this!
@@ -209,7 +212,7 @@ public class SchedulerSimulation {
 
             // Create a new process object with a unique name, burst time, and the defined
             // time quantum
-            // feature 1
+            // feature 1 :generate random priority (1-5)
             int priority = 1 + random.nextInt(5);
             Process process = new Process("P" + i, burstTime, timeQuantum, priority);
 
@@ -252,6 +255,8 @@ public class SchedulerSimulation {
             System.out.println(Colors.BOLD + Colors.MAGENTA + "└" + "─".repeat(79) + Colors.RESET + "\n");
 
             // Start the thread, which will run the process for one time quantum
+            // Feature 2: increment context switch
+            contextSwitches++;
             currentThread.start();
 
             try {
@@ -281,7 +286,8 @@ public class SchedulerSimulation {
                 }
             }
         }
-
+        // Feature 2: print total context switches
+        System.out.println("Total context switches: " + contextSwitches);
         // End of the scheduler simulation
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN +
                 "╔════════════════════════════════════════════════════════════════════════════════╗" +
