@@ -32,30 +32,39 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Your Development Log:
 
-### Entry 1 - [Date and Time]
-**What I did**: 
+### Entry 1 - [March 25, 2026, 2:30 PM]
 
-**Details**: 
+**What I did**: Started working on the assignment and explored the provided code
 
-**Challenges**: 
+**Details**:
+- Opened the project in VS Code
+- Read and understood the structure of the code (Process class and SchedulerSimulation)
+- Learned how Round-Robin scheduling works in the program
+- Ran the program for the first time and observed the output
+- Noticed how processes move in the ready queue and how context switching happens
 
-**Solution**: 
+**Challenges**: At first, it was confusing to understand how threads execute and how the scheduling loop works
 
-**Time spent**: 
-
+**Solution**: Carefully read the code step by step and re-ran the program multiple times to understand the flow
+**Time spent**: 4 hours
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**: 
+### Entry 2 - [March 26, 2026, 5:30 PM]
 
-**Details**: 
+**What I did**: Studied the starter code and understood the scheduling logic
 
-**Challenges**: 
+**Details**:
+- Analyzed the Process class and SchedulerSimulation
+- Understood how Round-Robin scheduling works
+- Observed how threads are created and executed
+- Traced the program output step by step
+- Understood how processes move in the ready queue
 
-**Solution**: 
+**Challenges**: I found it difficult to understand how threads interact with the queue and how scheduling is controlled
 
-**Time spent**: 
+**Solution**: Re-read the code carefully and linked it with OS concepts from lectures and notes
 
+**Time spent**: 1 hour
 ---
 
 ### Entry 3 - [Date and Time]
